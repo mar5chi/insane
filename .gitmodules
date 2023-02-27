@@ -1,0 +1,3 @@
+[submodule "Insane/vendor/spdlog"]
+	path = Insane/vendor/spdlog
+	url = https://github.com/gabime/spdlog
