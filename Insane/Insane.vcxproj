@@ -11,6 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Insane\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Insane\Events\Event.h" />
+    <ClInclude Include="src\Insane\Events\KeyEvent.h" />
+    <ClInclude Include="src\Insane\Events\MouseEvent.h" />
     <ClInclude Include="src\Insane\Log.h" />
     <ClInclude Include="src\Insane.h" />
     <ClInclude Include="src\Insane\Application.h" />
@@ -69,7 +73,7 @@
       <PreprocessorDefinitions>IS_PLATFORM_WINDOWS;IS_BUILD_DLL;INSANE_BUILD_DLL_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Insane\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Insane\vendor\spdlog\include;$(SolutionDir)Insane\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

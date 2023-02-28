@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Insane/Events/ApplicationEvent.h"
+#include "Insane/Log.h"
+
 namespace Insane {
 
 	Application::Application()
@@ -12,7 +15,10 @@ namespace Insane {
 	}
 
 	void Application::Run() {
-		while (true);
+		WindowResizeEvent e(1280, 720);
+		IS_TRACE(e.ToString());
+
+		while (true) {};
 	}
 
 }

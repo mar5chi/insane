@@ -2,10 +2,11 @@
 
 #ifdef IS_PLATFORM_WINDOWS
 
+
 extern Insane::Application* Insane::CreateApplication();
 
 int main(int argc, char** argv) {			// entry point
-	//printf("Insane Engine\n");
+	printf("Insane Engine\n");
 
 	Insane::Log::Init();
 	IS_CORE_WARN("Initialized Log!");
