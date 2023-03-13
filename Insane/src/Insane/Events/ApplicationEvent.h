@@ -2,8 +2,6 @@
 
 #include "Insane/Events/Event.h"
 
-#include <sstream>
-
 namespace Insane {
 
 	class INSANE_API WindowResizeEvent : public Event

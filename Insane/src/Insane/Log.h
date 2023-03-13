@@ -1,7 +1,5 @@
 #pragma once
 
-#include <memory>  // Shared ptr
-
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"

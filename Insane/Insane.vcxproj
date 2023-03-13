@@ -20,10 +20,16 @@
     <ClInclude Include="src\Insane\Application.h" />
     <ClInclude Include="src\Insane\Core.h" />
     <ClInclude Include="src\Insane\EntryPoint.h" />
+    <ClInclude Include="src\ispch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Insane\Log.cpp" />
     <ClCompile Include="src\Insane\Application.cpp" />
+    <ClCompile Include="src\ispch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ispch.h</PrecompiledHeaderFile>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -74,6 +80,9 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Insane\vendor\spdlog\include;$(SolutionDir)Insane\src</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>ispch.h</PrecompiledHeaderFile>
+      <DiagnosticsFormat>Classic</DiagnosticsFormat>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +99,8 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Insane\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>ispch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

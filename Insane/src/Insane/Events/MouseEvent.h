@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Insane {
 
 	class INSANE_API MouseMovedEvent : public Event

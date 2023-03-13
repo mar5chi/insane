@@ -1,9 +1,8 @@
 #pragma once
 
+#include "ispch.h"
 #include "Insane/Core.h"
 
-#include <string>       // should be in precompiled header
-#include <functional>   // should be in precompiled header
 
 namespace Insane {
 

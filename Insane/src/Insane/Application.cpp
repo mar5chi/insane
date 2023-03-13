@@ -1,3 +1,4 @@
+#include "ispch.h"
 #include "Application.h"
 
 #include "Insane/Events/ApplicationEvent.h"

@@ -7,6 +7,8 @@ workspace "Insane"
 		"Release",
 		"Dist"
 	}
+	
+	startproject "Sandbox"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -17,6 +19,9 @@ project "Insane"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "ispch.h"
+	pchsource "Insane/src/ispch.cpp"
 
 	files 
 	{
@@ -68,15 +73,15 @@ project "Sandbox"
 
 	files 
 	{
-		"%{prj.name}/*.cpp",
+		"%{prj.name}/**.cpp",
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs
 	{
-		"Insane/vendor/spdlog/include",
-		"Insane/src"
+		"Insane/src",
+		"Insane/vendor/spdlog/include"
 	}
 
 	links
