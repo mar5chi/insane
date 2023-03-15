@@ -12,6 +12,14 @@ workspace "Insane"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory) 
+IncludeDir = {}
+-- compiler include directory
+IncludeDir["GLFW"] = "Insane/vendor/GLFW/include"
+
+-- include the glfw premake.lua file here
+include "Insane/vendor/GLFW"
+
 project "Insane"
 	location "Insane"
 	kind "SharedLib"
@@ -32,7 +40,15 @@ project "Insane"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	-- link the GLFW Project which compiles to a static library into Insane.dll
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

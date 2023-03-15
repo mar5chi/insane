@@ -1,3 +1,6 @@
 [submodule "Insane/vendor/spdlog"]
 	path = Insane/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Insane/vendor/GLFW"]
+	path = Insane/vendor/GLFW
+	url = https://github.com/mar5chi/glfw
