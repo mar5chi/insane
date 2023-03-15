@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Insane/Log.h"
+
 #ifdef IS_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

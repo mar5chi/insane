@@ -2,7 +2,8 @@
 #include "Application.h"
 
 #include "Insane/Events/ApplicationEvent.h"
-#include "Insane/Log.h"
+
+#include <GLFW/glfw3.h>
 
 namespace Insane {
 
@@ -29,6 +30,8 @@ namespace Insane {
 		//}
 		
 		while (m_Running) {
+			glClearColor(0, 0.5, 0.5, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
 		};
 	}

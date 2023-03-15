@@ -1,6 +1,5 @@
 #include "ispch.h"
 #include "WindowsWindow.h"
-#include "Insane/Log.h"
 
 namespace Insane {
 
